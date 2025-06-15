@@ -190,7 +190,7 @@ async def send_initial_conversation_item(openai_ws):
             "content": [
                 {
                     "type": "input_text",
-                    "text": "Greet the user with 'Hello there!'"
+                    "text": "Hälsa på personen med 'Tjena, har du en minut?'"
                 }
             ]
         }
@@ -217,7 +217,7 @@ async def initialize_session(openai_ws):
     await openai_ws.send(json.dumps(session_update))
 
     # Uncomment the next line to have the AI speak first
-    # await send_initial_conversation_item(openai_ws)
+     await send_initial_conversation_item(openai_ws)
 
 if __name__ == "__main__":
     import uvicorn
